@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Vue.js</title>
+</head>
+
+<body>
+	<main id="vue">
+		<div class="jang">
+			<div>{{message}}</div>
+			<form>
+				<h1 v-bind:title="message + ' ' + '321123'">Форма учета посещений</h1>
+				<div id="wrap_inputs">
+					<div class="wrap_name">
+						<label for="name">Имя студента:</label>
+						<input type="text" v-model="name" placeholder="Name" class="name">
+					</div>
+					<div class="wrap_surname">
+						<label for="surname">Фамилия студента:</label>
+						<input type="text" v-model="surname" placeholder="Фамилия" class="surname">
+					</div>
+					<input type="submit" :disabled="name == '' || surname == ''" @click.prevent="onSubmit">
+				</div>
+			</form>
+			<div>
+				<template v-if="name != '' || surname != '' || students != ''">
+
+
+					<p>Имя</p>
+					<p>Фамилия</p>
+
+					<p v-for="s in students">
+						{{s.sName.split(' ')[0]}}
+						{{s.sName.split(' ')[1]}}
+
+						<p class="grey">
+							{{name}}
+							{{surname}}
+
+							</table>
+				</template>
+				<h2 v-else>Ничего нету!</h2>
+			</div>
+			<button class="btn" v-on:click="counter++">{{'Можно нажать на кнопочку' + ' ' + counter}}</button>
+	</main>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

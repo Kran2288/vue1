@@ -1,0 +1,49 @@
+html>body {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+}
+
+#app>h1,
+#app>p {
+    text-align: center;
+}
+
+form {
+    display: grid;
+}
+
+input[type='text'] {
+    padding: 5px 10px;
+    border-radius: 0px;
+    border: 1px solid lightgray
+}
+
+button[type='submit'] {
+    border-radius: 10px;
+    background-color: rgb(87, 211, 114);
+    padding: 7px 12px;
+    border: 1px solid lightgray;
+    margin-top: 15px;
+}
+
+.visits-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.visits-list ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.visits-list ul li:last-child {
+    padding: 0 15px;
+}
+
+.head-table {
+    font-size: 25px;
+}
